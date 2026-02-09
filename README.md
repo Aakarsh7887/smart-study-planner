@@ -5,7 +5,6 @@ A modern productivity web application built using **HTML, CSS, and Vanilla JavaS
 #Live Demo:  
 https://your-username.github.io/smart-study-planner/
 
----
 
 ## Overview
 
@@ -13,7 +12,6 @@ Smart Study Planner is a fully frontend-based study management system designed t
 
 Unlike basic CRUD apps, this project includes conflict detection, real-time analytics, time calculations, and persistent state management — all implemented without any frameworks or libraries.
 
----
 
 ## Key Features
 
@@ -51,7 +49,6 @@ Unlike basic CRUD apps, this project includes conflict detection, real-time anal
 - Reset all data
 - Theme persistence using LocalStorage
 
----
 
 ## Technical Highlights
 
