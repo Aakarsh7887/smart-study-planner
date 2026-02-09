@@ -3,7 +3,7 @@
 A modern productivity web application built using **HTML, CSS, and Vanilla JavaScript** that helps students manage subjects, organize schedules, track tasks, and analyze performance — all powered by browser LocalStorage.
 
 #Live Demo:  
-https://your-username.github.io/smart-study-planner/
+https://aakarsh7887.github.io/smart-study-planner/
 
 
 ## Overview
