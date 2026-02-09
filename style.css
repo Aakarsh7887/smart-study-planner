@@ -1,0 +1,141 @@
+:root {
+  --primary: #4f46e5;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #111;
+}
+
+.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  background: var(--primary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  margin: 5px 0;
+  padding: 8px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.main {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.progress-bar-container {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 8px;
+}
+
+
+.overdue {
+  border-left: 5px solid red;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.subject-bar {
+  background: #ddd;
+  height: 18px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.subject-progress {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+.day-group {
+  margin-bottom: 20px;
+}
+
+.day-group h4 {
+  margin-bottom: 5px;
+}
+
+.schedule-slot {
+  background: var(--card);
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid var(--primary);
+}
+
+.schedule-slot small {
+  opacity: 0.8;
+}
