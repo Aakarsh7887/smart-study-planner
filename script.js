@@ -1,3 +1,7 @@
+if (localStorage.getItem("theme") === "true") {
+  document.body.classList.add("dark");
+}
+
 let state = {
   subjects: JSON.parse(localStorage.getItem("subjects")) || [],
   tasks: JSON.parse(localStorage.getItem("tasks")) || [],
@@ -360,3 +364,4 @@ function renderAll() {
 }
 
 renderAll();
+
