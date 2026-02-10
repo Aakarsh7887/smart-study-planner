@@ -102,6 +102,7 @@ function deleteSubject(id) {
   state.subjects = state.subjects.filter((s) => s.id !== id);
   state.tasks = state.tasks.filter((t) => t.subjectId !== id);
   saveData();
+  showToast("Subject deleted");
 }
 
 function populateSubjectDropdowns() {
@@ -203,7 +204,7 @@ function renderSchedules() {
   const container = document.getElementById("weeklySchedule");
   container.innerHTML = "";
 
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   days.forEach((day) => {
     const daySchedules = state.schedules.filter((s) => s.day === day);
@@ -364,4 +365,5 @@ function renderAll() {
 }
 
 renderAll();
+
 
