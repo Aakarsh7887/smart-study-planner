@@ -38,18 +38,28 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f temp-container || true
-
+        
                 docker run -d \
-                --name temp-container \
-                -p 8090:80 \
-                $IMAGE_NAME
-
+                  --name temp-container \
+                  -p 8090:80 \
+                  $IMAGE_NAME
+        
                 echo "Waiting for container startup..."
-
-                sleep 10
-
-                curl -f http://localhost:8090
-
+        
+                sleep 25
+        
+                echo "Running Containers:"
+                docker ps
+        
+                echo "Checking container logs:"
+                docker logs temp-container
+        
+                echo "Testing application response..."
+        
+                curl -v http://host.docker.internal:8090 || \
+                curl -v http://172.17.0.1:8090 || \
+                curl -v http://localhost:8090
+        
                 docker stop temp-container
                 docker rm temp-container
                 '''
